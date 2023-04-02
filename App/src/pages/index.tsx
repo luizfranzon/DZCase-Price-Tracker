@@ -24,7 +24,7 @@ export default function Home() {
         <Image className="mt-8" src={dzCaseImage} alt="Caixa da Zona de perigo" width={280} />
         <div className="w-full h-[2px] bg-white/30 rounded-xl my-9"></div>
         <section className="flex flex-col items-center py-6">
-          <span className="text-7xl font-bold">R$ <span className="text-[#99C300]">{data.lowest_price".split(" ")[1]}</span></span>
+          <span className="text-7xl font-bold">R$ <span className="text-[#99C300]">{data.lowest_price.split(" ")[1]}</span></span>
           <span className="text-lg text-white/70 mt-2">Vendidas das últimas 24h: {data.volume}</span>
         </section>
       </main>
