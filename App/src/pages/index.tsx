@@ -12,9 +12,12 @@ export default function Home() {
   })
 
   useEffect(() => {
-    fetch("./api/dgcaseprice")
-      .then(res => res.json())
-      .then(data => setData(data))
+    const interval = setInterval(() => {
+      fetch("./api/dgcaseprice")
+        .then(res => res.json())
+        .then(data => setData(data))
+    }, 2000);
+    return () => clearInterval(interval);
   }, [])
 
   return (
